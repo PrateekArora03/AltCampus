@@ -1,0 +1,9 @@
+.button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 5px;
+  background-color: aqua;
+  text-decoration: none;
+  border-radius: 25px;
+  color: blanchedalmond;
+}

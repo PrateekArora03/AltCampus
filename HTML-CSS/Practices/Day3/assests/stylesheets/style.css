@@ -1,0 +1,29 @@
+.box {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}
+.baap {
+  background-color: rgb(61, 133, 39);
+}
+.box1 {
+  background-color: rgb(14, 209, 160);
+  float: left;
+}
+.box2 {
+  float: right;
+  background: rgb(107, 74, 160);
+}
+.box3 {
+  background-color: rgb(180, 158, 131);
+  height: 200px;
+  clear: both;
+}
+.baap:before,
+.baap:after {
+  content: "";
+  display: table;
+}
+.baap:after {
+  clear: both;
+}

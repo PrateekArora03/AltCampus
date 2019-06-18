@@ -1,0 +1,11 @@
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h2{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-variant: small-caps;
+    text-align: justify;
+    text-decoration: overline;
+    text-indent: 30px;
+    text-shadow: 4px 60px 2px rgb(168, 76, 76);
+}

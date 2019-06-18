@@ -1,0 +1,31 @@
+.box {
+  box-sizing: border-box;
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  padding: 20px;
+  border: 10px solid black;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: inset 0px 0px 0px 12px #350baa, 10px 20px 10px #8b6868;
+}
+/* .box1 {
+  vertical-align: middle;
+  display: inline-block;
+  background-color: red;
+  height: 200px;
+  width: 200px;
+} */
+/* .block {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+}
+.inline { */
+/* padding: 20px; */
+/*/* display: block;
+  background-color: brown;
+  border: 10px groove rgb(42, 165, 155);
+  margin: 20px; margin does not apply in inline element from top and buttom 
+} */

@@ -1,0 +1,40 @@
+.baap{
+    background-color: aqua;
+    padding: 20px;
+    display: flex;
+    height: 90vh;
+    /* justify-content: space-evenly; */
+    /* align-items: baseline; */
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.box{
+    padding: 50px;
+    background: red;
+    margin: 10px;
+}
+.box1{
+    order: 1;
+    font-size: 12px;
+}
+.box4{
+    font-size: 16px;
+    order:-1;
+    /* align-self: flex-end; */
+}
+.box2{
+    font-size: 106px;
+}
+.box3{
+    font-size: 51px;
+}
+/* hh{
+display:flex;
+flex-direction: ;
+flex-wrap: ;
+justify-content: ;
+align-items: ;
+align-content: ;
+order: ;
+align-self: ;
+} */

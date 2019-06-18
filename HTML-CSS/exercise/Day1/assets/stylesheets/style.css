@@ -1,0 +1,13 @@
+*{
+    text-align: center;
+}
+h1{
+    color:#30ba67;
+    font-style: italic;
+}
+.bold{
+    font-weight: bold;
+}
+#red{
+    color:red;
+}

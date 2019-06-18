@@ -1,0 +1,113 @@
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+/* dl, dt, dd, ol, ul, li, */
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background-color: #D4CEA7;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    background-color: rgb(226, 77, 27);
+    padding: 20px;
+    padding-left:150px; 
+    position:fixed;
+}
+nav::before,nav::after{
+    contain:'';
+    display: table;
+}
+nav::after{
+    clear: both;
+}
+.nav a{
+    padding: 20px;
+    font-weight: bold;
+}
+.nav a:hover{
+    background-color: rgb(180, 72, 36);
+}
+main{
+    max-width: 80%;
+    margin:0 auto;
+    margin-top: 7vh;
+    text-align: center;
+}
+.sec{
+    text-align: left;
+    width: 27%;
+    display: inline-block;
+    background-color: #185979;
+    margin-right: 40px;
+    vertical-align: top;
+    height:60vh;
+    box-shadow: 10px 10px 15px rgb(63, 63, 36);
+    color:#C2CFA7;
+    font-weight: 800;
+    line-height: 1.7;
+}
+.sec-3 ol{
+    list-style-type: none;
+}
+.sec-3 ol li::before{
+    content: '✓';
+    color: #185979;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 1px 10px black;
+    margin-right: 10px;
+}
+.content{
+    margin-top: 13vh;
+    text-align: left;
+}
+dt{
+    margin-top: 28px;
+    font-size: 22px;
+    font-weight: 200;
+    color: #252C21;
+}
+dd{
+    color:#82765F;
+}
+footer{
+    margin-top: 70px;
+}

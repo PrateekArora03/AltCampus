@@ -1,0 +1,36 @@
+.box {
+  background-color: brown;
+  height: 60px;
+  width: 90px;
+  margin-bottom: 30px;
+}
+.box1 {
+  border: 2px solid #000;
+}
+.box2 {
+  border: 2px double #000;
+  display: inline-block;
+  margin-right: 30px;
+}
+.box3 {
+  border: 2px dashed #000;
+  display: inline-block;
+}
+.box4 {
+  border: 2px dotted #000;
+  display: inline-block;
+  margin-right: 30px;
+}
+.box5 {
+  display: inline-block;
+}
+.big-box {
+  background-color: rgb(117, 65, 65);
+  height: 200px;
+  width: 250px;
+  outline: 13px solid purple;
+  border-top: 9px solid blue;
+  border-bottom: 8px solid grey;
+  border-right: 8px solid yellow;
+  border-left: 8px solid green;
+}
