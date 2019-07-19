@@ -10,7 +10,7 @@ body {
 }
 .main {
   position: absolute;
-  width: 768px;
+  width: 60%;
   background-color: #fff;
   left: 50%;
   top: 50%;
@@ -25,11 +25,10 @@ body {
   background-color: #cbcbcb;
   height: 100vh;
   position: relative;
-  buttom: 0;
 }
 .ins {
   display: flex;
-  margin: 10px auto 50px auto;
+  margin: 10px auto 30px auto;
   border: 0;
   width: 60%;
   border-bottom: 3px solid #cbcbcb;
@@ -42,19 +41,14 @@ body {
 }
 ul {
   list-style-type: none;
+  padding: 0 10rem;
 }
-button {
-  background: transparent;
-  border: 0;
-  color: tomato;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-input[type="checkbox"] {
-  cursor: pointer;
-}
-li > div {
+li {
   display: flex;
-  justify-content: space-around;
   align-items: baseline;
+  justify-content: space-between;
+}
+span {
+  color: tomato;
+  cursor: pointer;
 }
