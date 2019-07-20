@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap");
+* {
+  font-family: "Nanum Gothic", sans-serif;
+}
+body {
+  background-image: url("https://source.unsplash.com/1920x1080/?nature,water");
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+#search {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.616);
+  color: rgba(255, 255, 255, 0.616);
+  line-height: 20px;
+  font-size: 15px;
+}
+#search:hover {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 22px;
+  transition: font-size 280ms;
+}
+#search:focus {
+  outline: 0;
+  font-size: 22px;
+}
+#search::placeholder {
+  color: rgba(255, 255, 255, 0.692);
+}
+/* #search::before {
+  position: absolute;
+  top: 0px;
+  left: -5px;
+  content: "\f002";
+} */
+#weather {
+  color: #fff;
+  font-size: 2rem;
+}
+main {
+  margin-top: 17vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.time {
+  font-size: 8rem;
+  color: teal;
+}
+.message {
+  font-size: 2rem;
+  color: rgb(199, 191, 34);
+}
+.name {
+  font-size: 2rem;
+  color: rgb(199, 191, 34);
+  font-weight: 100;
+}
+#focus {
+  text-align: center;
+  margin: 20px;
+}
+#focus-msg {
+  font-size: 31px;
+  color: #a93838;
+  font-weight: 800;
+}
+#focus-text {
+  margin-top: 20px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.616);
+  color: rgba(255, 255, 255, 0.616);
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+#focus-text:hover {
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 32px;
+  transition: font-size 280ms;
+}
+#focus-text:focus {
+  outline: 0;
+  font-size: 50px;
+}
+#focus-text::placeholder {
+  color: rgba(255, 255, 255, 0.692);
+}
+#focusShow {
+  font-size: 50px;
+  font-weight: 800;
+  color: coral;
+}
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  font-size: 2rem;
+  transform: translatex(-50%);
+  text-align: center;
+  margin-bottom: 10px;
+}
+footer p {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#author {
+  display: none;
+  color: indianred;
+}
