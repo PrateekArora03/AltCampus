@@ -21,7 +21,7 @@ header {
   border-bottom: 2px solid #fff;
   color: #fff;
   font-size: 22px;
-  transition: font-size 280ms;
+  transition: font-size 0ms;
 }
 #search:focus {
   outline: 0;
@@ -30,12 +30,7 @@ header {
 #search::placeholder {
   color: rgba(255, 255, 255, 0.692);
 }
-/* #search::before {
-  position: absolute;
-  top: 0px;
-  left: -5px;
-  content: "\f002";
-} */
+
 #weather {
   color: #fff;
   font-size: 2rem;
