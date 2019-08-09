@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Jaldi:400,700&display=swap");
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.activeLink {
+  border-bottom: 4px solid #d64161;
+  border-right: 4px solid #d64161;
+}
+
+header {
+  position: absolute;
+  height: auto;
+  padding-top: 2rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px 0px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px 0px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  max-height: 700px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+header nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+header nav div i {
+  cursor: pointer;
+  color: aquamarine;
+  font-size: 1.7rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  margin-right: 0.8rem;
+  text-decoration: none;
+}
+
+.my-details {
+  height: 800px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 6rem;
+  margin-top: 4.5rem;
+  max-height: 700px;
+  max-width: 668px;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  vertical-align: baseline;
+}
+
+.my-details .introduction {
+  margin-top: 2rem;
+}
+
+.my-details .introduction h1 {
+  font-family: "Jaldi", sans-serif;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 1rem;
+  margin-right: 5.3rem;
+  margin-top: 1rem;
+  letter-spacing: 9px;
+  text-align: left;
+  font-size: 2.6rem;
+  padding: 1rem;
+}
+
+.my-details .introduction h1 span {
+  font-size: 10rem;
+}
+
+.my-details .introduction h1 pre {
+  margin-top: 1rem;
+  font-size: 2rem;
+  letter-spacing: 9px;
+}
+
+.my-details .introduction p {
+  padding: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-details .introduction p small {
+  font-family: Overpass, sans-serif;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+.my-details a .contact-me {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 3rem;
+  width: 50%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: teal;
+  -o-border-image: initial;
+     border-image: initial;
+  padding: 0.8rem;
+  background: transparent;
+}
+
+.my-details a .contact-me:hover {
+  border-width: 2px;
+  border-style: solid;
+  border-color: aquamarine;
+  -o-border-image: initial;
+     border-image: initial;
+}
+
+.life-code {
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+  color: antiquewhite;
+}
+
+.life-code .parent {
+  color: aquamarine;
+}
+
+.life-code .children {
+  color: #00bcd4;
+  padding-right: 5px;
+  padding-left: 3rem;
+}
+
+.life-code .parent-children {
+  color: aquamarine;
+  padding-left: 3rem;
+}
+
+.navyBlue {
+  color: #17223b !important;
+}
+/*# sourceMappingURL=main.css.map */
