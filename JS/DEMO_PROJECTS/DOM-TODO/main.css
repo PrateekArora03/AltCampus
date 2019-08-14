@@ -38,6 +38,7 @@ body {
 }
 .ins:focus {
   outline: 0;
+	border:0;
 }
 ul {
   list-style-type: none;
