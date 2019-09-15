@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= data.title %></title>
+  </head>
+  <body>
+    <a href="/">Home</a>
+    <h1><%= data.title %></h1>
+    <a href="/blog/<%= data.id %>/update">Update</a>
+    <a href="/blog/<%= data.id %>/delete">Delete</a>
+    <div><%= data.description %></div>
+    <h2>comment</h2>
+    <form action="/comment/<%= data.id %>" method="post">
+      <textarea name="comment" id="" cols="80" rows="2"></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+    <h2>Comment</h2>
+    <% data.comments.forEach(com=>{ %>
+    <div>
+      <p><%= com.comment %></p>
+      <a href="/comment/<%= com.id%>/update">Update</a>
+      <a href="/comment/<%= com.id%>/delete">Delete</a>
+    </div>
+    <% }); %>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Blogger</title>
+  </head>
+
+  <body>
+    <form action="/blog/<%= data.id %>/updatepost" method="post">
+      <input
+        type="text"
+        placeholder="Title"
+        name="title"
+        value="<%= data.title %>"
+      />
+      <textarea name="description" id="" cols="30" rows="10">
+<%= data.description %></textarea
+      >
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

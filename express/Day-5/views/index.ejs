@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Blogger</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>MY BLOG</h1>
+    <h2><a href="/create">create new article</a></h2>
+    <% allPost.reverse().forEach(post=>{ %>
+    <h2><a href="blog/<%= post.id %>"><%= post.title %></a></h2>
+    <p><%= post.description %></p>
+    <% }) %>
+  </body>
+</html>

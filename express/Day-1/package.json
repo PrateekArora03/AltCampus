@@ -1,0 +1,16 @@
+{
+  "name": "learn-express",
+  "version": "1.0.0",
+  "description": "first express project to learn express.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "run": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1"
+  }
+}
