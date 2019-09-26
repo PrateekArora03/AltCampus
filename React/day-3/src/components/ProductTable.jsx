@@ -1,5 +1,5 @@
 import React from "react";
-import ProductRow from "./ProductRow";
+import ProductCategoryRow from "./ProductCategoryRow";
 
 const data = [
   {
@@ -35,38 +35,22 @@ const data = [
   { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" }
 ];
 
+// const category = data.reduce((acc,cv)=>{
+//   (acc[cv.category]=)
+// },{})
+// console.log(category);
+
 export default function ProductTable() {
   return (
     <table>
-      <thead>
-        <th>Name</th>
-        <th>Price</th>
-      </thead>
-      <tbody>
-        <th colSpan="2">Sporting Goods</th>
-        {data.map(product => (
-          <ProductRow
-            name={product.name}
-            price={product.price}
-            stocked={product.stocked}
-          />
-        ))}
-      </tbody>
-      <tbody>
-        <th colSpan="2">Electronics</th>
-        <tr>
-          <td>iPod Touch</td>
-          <td>$99.99</td>
-        </tr>
-        <tr>
-          <td>iPhone 5</td>
-          <td>$399.99</td>
-        </tr>
-        <tr>
-          <td>Nexus 7</td>
-          <td>$199.99</td>
-        </tr>
-      </tbody>
+      <ProductCategoryRow
+        product={data.filter(product => product.category === "Electronics")}
+        category="Electronics"
+      />
+      <ProductCategoryRow
+        product={data.filter(product => product.category === "Sporting Goods")}
+        category="Sporting Goods"
+      />
     </table>
   );
 }
