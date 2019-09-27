@@ -3,14 +3,16 @@ import { Route } from "react-router-dom";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import HomeFeed from "./components/HomeFeed";
+import Feed from "./components/Feed";
+import HeroSection from "./components/HeroSection";
 import "./App.scss";
 
 function App() {
   return (
     <>
       <Header />
-      <Route exact path='/' component={HomeFeed} />
+      <HeroSection />
+      <Route exact path='/' component={Feed} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/signup' component={SignUp} />
     </>

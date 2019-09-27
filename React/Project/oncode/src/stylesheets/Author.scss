@@ -1,0 +1,22 @@
+.article-author-info {
+  display: flex;
+  .article-author-img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+  }
+  .article-author-data {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    .article-author-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: black;
+    }
+    .article-published-data {
+      font-weight: 300;
+      color: #5c5c5c;
+    }
+  }
+}
