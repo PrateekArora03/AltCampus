@@ -1,5 +1,5 @@
 import React from "react";
-import "../stylesheets/Author.scss";
+import "../stylesheets/ArticleAuthorInfo.scss";
 import { Link } from "react-router-dom";
 
 export default function ArticleAuthorInfo() {
