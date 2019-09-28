@@ -1,6 +1,10 @@
+.home-data {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.3rem;
+}
 .article-preview {
-  margin: 2.3rem 0 2.2rem 2.2rem;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.5rem 0;
-  width: 720px;
+  width: 825px;
 }
