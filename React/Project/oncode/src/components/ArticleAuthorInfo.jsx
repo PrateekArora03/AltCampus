@@ -2,7 +2,7 @@ import React from "react";
 import "../stylesheets/ArticleAuthorInfo.scss";
 import { Link } from "react-router-dom";
 
-export default function ArticleAuthorInfo() {
+export default function ArticleAuthorInfo(props) {
   return (
     <div className='article-author-info'>
       <img
@@ -12,9 +12,9 @@ export default function ArticleAuthorInfo() {
       />
       <div className='article-author-data'>
         <Link className='article-author-name' to='#'>
-          sunny
+          {props.user.userid.username}
         </Link>
-        <span className='article-published-data'>Fri Sep 27 2019</span>
+        <span className='article-published-data'>{props.user.createdAt}</span>
       </div>
     </div>
   );

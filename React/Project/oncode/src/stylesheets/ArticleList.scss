@@ -1,4 +1,6 @@
 .article-data-preview {
+  display: flex;
+  flex-direction: column;
   h1 {
     font-weight: 600;
     font-size: 1.5rem;

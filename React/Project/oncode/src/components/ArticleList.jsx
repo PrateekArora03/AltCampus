@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/ArticleList.scss";
 
-export default function ArticleList() {
+export default function ArticleList(props) {
+  let { title, post } = props.article;
+  console.log(title, post);
   return (
     <span className='article-data-preview'>
       <Link to='#'>
-        <h1>By the rivers of Babylon</h1>
+        <h1>{title}</h1>
       </Link>
-      <p>there we sat down</p>
+      <p>{post}</p>
     </span>
   );
 }
