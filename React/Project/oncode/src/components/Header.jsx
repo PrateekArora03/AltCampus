@@ -6,7 +6,7 @@ export default function Header(props) {
   return (
     <header className='container'>
       <nav className='navbar'>
-        <Link className='nav navbar-brand' to='/'>
+        <Link className='nav navbar-brand titillium-font' to='/'>
           onCode
         </Link>
         <ul className='nav navbar-list'>
@@ -29,11 +29,23 @@ export default function Header(props) {
               </li>
             </>
           ) : (
-            <li className='nav-item'>
-              <Link className='nav-link' to='/login'>
-                {props.user.name}
-              </Link>
-            </li>
+            <>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/compose'>
+                  New Post
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/account/edit'>
+                  Settings
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to={`/@${props.user.username}`}>
+                  {props.user.username}
+                </Link>
+              </li>
+            </>
           )}
         </ul>
       </nav>

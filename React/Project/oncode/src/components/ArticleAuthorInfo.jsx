@@ -11,7 +11,7 @@ export default function ArticleAuthorInfo(props) {
         alt='authorImage'
       />
       <div className='article-author-data'>
-        <Link className='article-author-name' to='#'>
+        <Link className='article-author-name titillium-font' to='#'>
           {props.user.userid.username}
         </Link>
         <span className='article-published-data'>{props.user.createdAt}</span>

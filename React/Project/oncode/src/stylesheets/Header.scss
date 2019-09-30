@@ -1,3 +1,4 @@
+@import "./UI.scss";
 .container {
   padding: 0.5rem 0rem;
 }
@@ -9,7 +10,7 @@
   .navbar-brand {
     font-size: 1.7rem;
     font-weight: 600;
-    color: tomato;
+    color: $primaryColor;
   }
 }
 .navbar-list {

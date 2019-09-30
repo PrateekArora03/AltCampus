@@ -1,10 +1,11 @@
 import React from "react";
 import Tag from "./Tag";
+import Loader from "./Loader";
 import "../stylesheets/PopularTags.scss";
 
 class PopularTags extends React.Component {
   state = {
-    loading: false,
+    loader: true,
     tags: null
   };
   componentDidMount() {
@@ -19,8 +20,11 @@ class PopularTags extends React.Component {
       <div className='popular-tag'>
         <p>Popular Tags</p>
         <div className='tag-list'>
-          {this.state.tags &&
-            this.state.tags.map(tag => <Tag key={tag._id} tag={tag} />)}
+          {this.state.tags ? (
+            this.state.tags.map(tag => <Tag key={tag._id} tag={tag} />)
+          ) : (
+            <Loader />
+          )}
         </div>
       </div>
     );

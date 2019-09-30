@@ -28,7 +28,7 @@ class SignUp extends React.Component {
         <div className='form-container sign-in-container'>
           <h1>Sign up</h1>
           <Link to='/login'>You already have account?</Link>
-          <form onSubmit={this.handleSubmit} action='#'>
+          <form onSubmit={this.handleSubmit}>
             <input
               type='text'
               name='username'
@@ -47,7 +47,9 @@ class SignUp extends React.Component {
               onChange={this.handleChange}
               placeholder='Password'
             />
-            <button type='submit'>Sign Up</button>
+            <button className='btn' type='submit'>
+              Sign Up
+            </button>
           </form>
         </div>
       </div>

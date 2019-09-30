@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter as Router } from "react-router-dom";
 import "../stylesheets/FormUser.scss";
 class Login extends React.Component {
   constructor(props) {
@@ -21,8 +21,17 @@ class Login extends React.Component {
       },
       body: JSON.stringify(this.state)
     })
-      .then(data => data.json())
-      .then(user => this.props.loggedUser(user))
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok.");
+        } else return response.json();
+      })
+      .then(user => {
+        this.props.loggedUserToken(
+          user.message === "user login" ? user.token : ""
+        );
+        this.props.history.push("/");
+      })
       .catch(err => console.error(err));
   };
   render() {
@@ -30,7 +39,7 @@ class Login extends React.Component {
       <div className='form-container sign-in-container'>
         <h1>Sign in</h1>
         <Link to='/signup'>Need an account?</Link>
-        <form onSubmit={this.handleSubmit} action='#'>
+        <form onSubmit={this.handleSubmit}>
           <input
             type='email'
             name='email'
@@ -53,4 +62,4 @@ class Login extends React.Component {
     );
   }
 }
-export default Login;
+export default Router(Login);

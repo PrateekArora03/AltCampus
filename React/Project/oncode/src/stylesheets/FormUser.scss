@@ -1,3 +1,4 @@
+@import "./UI.scss";
 .form-container {
   height: 80vh;
   display: flex;
@@ -6,13 +7,15 @@
   align-items: center;
   margin: 2rem auto;
   h1 {
-    color: #5cb85c;
+    color: $secondaryColor;
+    margin-bottom: 1rem;
   }
   form {
     display: flex;
     margin-top: 0.5rem;
     flex-direction: column;
-    input {
+    input,
+    textarea {
       margin: 1rem 0;
       padding: 0.75rem 1.5rem;
       font-size: 1.25rem;
@@ -27,9 +30,12 @@
     }
     button {
       align-self: flex-end;
-      width: 5rem;
-      padding: 0.3rem 0;
+      padding: 0.75rem 1.5rem;
       font-size: 1.25rem;
+      border-radius: 0.3rem;
+      color: #fff;
+      background-color: $primaryColor;
+      border-color: $primaryColor;
     }
   }
 }
