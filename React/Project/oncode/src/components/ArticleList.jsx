@@ -4,7 +4,6 @@ import "../stylesheets/ArticleList.scss";
 
 export default function ArticleList(props) {
   let { title, post } = props.article;
-  console.log(title, post);
   return (
     <span className='article-data-preview'>
       <Link to='#'>

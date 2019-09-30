@@ -7,16 +7,45 @@ import Feed from "./components/Feed";
 import HeroSection from "./components/HeroSection";
 import "./App.scss";
 
-function App() {
-  return (
-    <>
-      <Header />
-      <HeroSection />
-      <Route exact path='/' component={Feed} />
-      <Route exact path='/login' component={Login} />
-      <Route exact path='/signup' component={SignUp} />
-    </>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      user: null
+    };
+  }
+  loggedUser = user => {
+    this.setState({ user });
+    localStorage.setItem("authToken", JSON.stringify(this.state.user.token));
+  };
+
+  protectedRoutes = () => {};
+  unProtectedRoutes = () => {
+    return (
+      <>
+        <Route
+          exact
+          path='/login'
+          render={() => <Login loggedUser={this.loggedUser} />}
+        />
+        <Route exact path='/signup' component={SignUp} />
+      </>
+    );
+  };
+
+  render() {
+    console.log(localStorage.authToken);
+    return (
+      <>
+        <Header />
+        <HeroSection />
+        <Route exact path='/' component={Feed} />
+        {!localStorage.authToken
+          ? this.unProtectedRoutes
+          : this.protectedRoutes}
+      </>
+    );
+  }
 }
 
 export default App;

@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/FormUser.scss";
 class Login extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       email: "",
       password: ""
@@ -14,7 +14,16 @@ class Login extends React.Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    fetch("");
+    fetch("http://localhost:3000/api/users/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state)
+    })
+      .then(data => data.json())
+      .then(user => this.props.loggedUser(user))
+      .catch(err => console.error(err));
   };
   render() {
     return (

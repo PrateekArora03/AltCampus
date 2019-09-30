@@ -9,13 +9,26 @@ class SignUp extends React.Component {
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  handleSubmit = e => {
+    e.preventDefault();
+    fetch("http://localhost:3000/api/users/", {
+      method: "POST",
+      body: JSON.stringify(this.state),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then(data => data.json())
+      .then(user => console.log(user))
+      .catch(err => console.error(err));
+  };
   render() {
     return (
       <div>
         <div className='form-container sign-in-container'>
           <h1>Sign up</h1>
           <Link to='/login'>You already have account?</Link>
-          <form action='#'>
+          <form onSubmit={this.handleSubmit} action='#'>
             <input
               type='text'
               name='username'

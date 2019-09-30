@@ -19,7 +19,8 @@ class PopularTags extends React.Component {
       <div className='popular-tag'>
         <p>Popular Tags</p>
         <div className='tag-list'>
-          {this.state.tags && this.state.tags.map(tag => <Tag tag={tag} />)}
+          {this.state.tags &&
+            this.state.tags.map(tag => <Tag key={tag._id} tag={tag} />)}
         </div>
       </div>
     );

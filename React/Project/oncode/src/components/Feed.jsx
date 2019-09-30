@@ -17,13 +17,12 @@ class Feed extends React.Component {
       .then(articles => this.setState({ articles }));
   }
   render() {
-    console.log(this.state.articles);
     return (
       <div className='container home-data'>
         <div className='article-container'>
           {this.state.articles &&
             this.state.articles.map(article => (
-              <div className='article-preview'>
+              <div key={article._id} className='article-preview'>
                 <ArticleAuthorInfo user={article} />
                 <ArticleList article={article} />
               </div>

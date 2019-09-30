@@ -5,7 +5,7 @@ import "../stylesheets/Tag.scss";
 export default function Tag(props) {
   let { tag } = props;
   return (
-    <Link className='tag' key={tag._id} to={props}>
+    <Link className='tag' to={props}>
       {tag.name}
     </Link>
   );
