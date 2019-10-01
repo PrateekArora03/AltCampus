@@ -1,11 +1,14 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
+import UserProfile from "./components/UserProfile";
+import UserProfileEdit from "./components/Profile/UserProfileEdit";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Feed from "./components/Feed";
 import Compose from "./components/Compose";
 import "./App.scss";
+import "font-awesome/css/font-awesome.css";
 
 class App extends React.Component {
   constructor() {
@@ -35,12 +38,15 @@ class App extends React.Component {
   protectedRoutes = () => {
     return (
       <Switch>
+        <Route exact path='/' component={Feed} />
         <Route exact path='/compose' component={Compose} />
-        <Route exact path='/account/edit' component={SignUp} />
         <Route
-          exact
-          path={`/@${this.state.user ? this.state.user.username : "/"}`}
-          render={() => console.log("user")}
+          path='/@:username'
+          render={() => <UserProfile user={this.state.user} />}
+        />
+        <Route
+          path='/account/edit'
+          render={() => <UserProfileEdit user={this.state.user} />}
         />
         <Route render={() => console.log("not fond")} />
       </Switch>
@@ -49,6 +55,7 @@ class App extends React.Component {
   unProtectedRoutes = () => {
     return (
       <>
+        <Route exact path='/' component={Feed} />
         <Route
           exact
           path='/login'
@@ -67,10 +74,7 @@ class App extends React.Component {
     return (
       <>
         <Header user={this.state.user} />
-        <Route exact path='/' component={Feed} />
-        {!localStorage.authToken
-          ? this.unProtectedRoutes()
-          : this.protectedRoutes()}
+        {!this.state.user ? this.unProtectedRoutes() : this.protectedRoutes()}
       </>
     );
   }

@@ -36,11 +36,6 @@ export default function Header(props) {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/account/edit'>
-                  Settings
-                </Link>
-              </li>
-              <li className='nav-item'>
                 <Link className='nav-link' to={`/@${props.user.username}`}>
                   {props.user.username}
                 </Link>

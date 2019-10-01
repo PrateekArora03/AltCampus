@@ -11,13 +11,12 @@ class Compose extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   handleSubmit = e => {
-    console.log(JSON.stringify(this.state));
     e.preventDefault();
     fetch("http://localhost:3000/api/articles/new", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        authorization: localStorage.authToken
+        authorization: JSON.parse(localStorage.authToken)
       },
       body: JSON.stringify(this.state)
     })
@@ -28,8 +27,7 @@ class Compose extends React.Component {
         } else return response.json();
       })
       .then(data => {
-        console.log(data);
-        //this.props.history.push("/");
+        this.props.history.push("/");
       })
       .catch(err => console.error(err));
   };
@@ -60,7 +58,7 @@ class Compose extends React.Component {
           ></textarea>
           <input
             type='text'
-            placeholder='Article Tags'
+            placeholder='Article Tags Seprate by comma(,)'
             value={this.state.tags}
             onChange={this.handleChange}
             name='tags'
