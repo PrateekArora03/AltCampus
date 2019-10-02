@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, withRouter as Router } from "react-router-dom";
-import "../stylesheets/FormUser.scss";
 class Login extends React.Component {
   constructor(props) {
     super(props);

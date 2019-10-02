@@ -1,7 +1,6 @@
 import React from "react";
 import Tag from "./Tag";
 import Loader from "./Loader";
-import "../stylesheets/PopularTags.scss";
 
 class PopularTags extends React.Component {
   state = {

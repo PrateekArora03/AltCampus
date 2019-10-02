@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { withRouter as Router } from "react-router-dom";
 
-export default class UserProfileEdit extends Component {
+class UserProfileEdit extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,6 +28,25 @@ export default class UserProfileEdit extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
+    fetch("http://localhost:3000/api/user/", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: JSON.parse(localStorage.authToken)
+      },
+      body: JSON.stringify(this.state)
+    })
+      .then(response => {
+        if (!response.ok) {
+          //   throw new Error(response);
+          throw new Error("Network response was not ok.");
+        } else return response.json();
+      })
+      .then(user => {
+        console.log(user);
+        //this.props.history.push("/");
+      })
+      .catch(err => console.error(err));
   };
   componentDidMount() {
     this.setState({ ...this.props.user });
@@ -107,3 +127,4 @@ export default class UserProfileEdit extends Component {
     );
   }
 }
+export default Router(UserProfileEdit);

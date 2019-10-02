@@ -4,7 +4,6 @@ import ArticleList from "./ArticleList";
 import PopularTags from "./PopularTags";
 import HeroSection from "./HeroSection";
 import Loader from "./Loader";
-import "../stylesheets/Feed.scss";
 
 class Feed extends React.Component {
   constructor() {
