@@ -27,14 +27,18 @@
     list-style: none;
     li {
       a {
+        outline: none;
         color: #fff;
         padding: 0.6rem;
         margin: 0.4rem;
+        border-radius: 5px;
         &:hover {
-          border-radius: 5px;
           background-color: lighten($primary-color, 7%);
         }
       }
     }
   }
+}
+.active-nav {
+  border-bottom: 1.7px solid #fff;
 }

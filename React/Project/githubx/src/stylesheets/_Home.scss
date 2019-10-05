@@ -1,0 +1,31 @@
+.home {
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @media all and (max-width: 768px) {
+    flex-direction: column;
+    height: 100vh;
+  }
+  a {
+    color: #fff;
+  }
+}
+.home-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lighten($dark-color, 30%);
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  i {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+  }
+  p {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+}

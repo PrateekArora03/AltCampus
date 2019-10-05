@@ -1,0 +1,27 @@
+.finder {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+.SearchBox {
+  input {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    margin-bottom: 0.8rem;
+  }
+  input[type="submit"] {
+    cursor: pointer;
+    background-color: $dark-color;
+    color: #fff;
+    border: 0;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    &:hover {
+      opacity: 0.8;
+      transition: opacity 0.2s ease-in-out;
+    }
+  }
+}

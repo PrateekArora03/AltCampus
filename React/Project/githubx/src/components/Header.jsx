@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -7,18 +7,24 @@ export default function Header() {
       <nav className='navbar'>
         <Link to='/'>
           <h1>
-            <i className='fa fa-github'></i> Githubx
+            <i className='fa fa-github'></i> GitHubX
           </h1>
         </Link>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <NavLink exact activeClassName='active-nav' to='/'>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to='finder'>Finder</Link>
+            <NavLink activeClassName='active-nav' to='finder'>
+              Finder
+            </NavLink>
           </li>
           <li>
-            <Link to='battle'>Battle</Link>
+            <NavLink activeClassName='active-nav' to='battle'>
+              Battle
+            </NavLink>
           </li>
         </ul>
       </nav>
