@@ -1,0 +1,40 @@
+.header {
+  display: block;
+  background-color: $primary-color;
+  color: white;
+  width: 100%;
+}
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 92%;
+  margin-bottom: 1rem;
+  @media screen and (max-width: 768px) {
+    padding: 1rem 1rem;
+    flex-direction: column;
+    ul {
+      margin: 0.7rem 0;
+    }
+  }
+  a {
+    color: #fff;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      a {
+        color: #fff;
+        padding: 0.6rem;
+        margin: 0.4rem;
+        &:hover {
+          border-radius: 5px;
+          background-color: lighten($primary-color, 7%);
+        }
+      }
+    }
+  }
+}
