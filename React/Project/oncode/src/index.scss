@@ -1,11 +1,9 @@
-@import "./App.scss";
-* {
+@import "./stylesheets/UI.scss";
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: source sans pro, sans-serif;
-}
-body {
 }
 a {
   color: $primaryColor;

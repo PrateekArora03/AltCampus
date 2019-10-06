@@ -43,7 +43,6 @@ class UserProfileEdit extends Component {
         } else return response.json();
       })
       .then(user => {
-        console.log(user);
         //this.props.history.push("/");
       })
       .catch(err => console.error(err));

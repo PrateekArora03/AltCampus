@@ -1,12 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
-import UserProfile from "./components/UserProfile";
-import UserProfileEdit from "./components/Profile/UserProfileEdit";
+import UserProfile from "./components/Profile/UserProfile";
+import UserProfileEdit from "./components/UserProfileEdit";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Feed from "./components/Feed";
 import Compose from "./components/Compose";
+import Article from "./components/Article/Article";
 import "./App.scss";
 import "font-awesome/css/font-awesome.css";
 
@@ -41,20 +42,18 @@ class App extends React.Component {
         <Route exact path='/' component={Feed} />
         <Route exact path='/compose' component={Compose} />
         <Route
-          path='/@:username'
-          render={() => <UserProfile user={this.state.user} />}
-        />
-        <Route
           path='/account/edit'
           render={() => <UserProfileEdit user={this.state.user} />}
         />
+        <Route exact path='/@:username' component={UserProfile} />
+        <Route path='/article/:slug' component={Article} />
         <Route render={() => console.log("not fond")} />
       </Switch>
     );
   };
   unProtectedRoutes = () => {
     return (
-      <>
+      <Switch>
         <Route exact path='/' component={Feed} />
         <Route
           exact
@@ -62,7 +61,10 @@ class App extends React.Component {
           render={() => <Login loggedUserToken={this.loggedUserToken} />}
         />
         <Route exact path='/signup' component={SignUp} />
-      </>
+        <Route exact path='/@:username' component={UserProfile} />
+        <Route path='/article/:slug' component={Article} />
+        <Route render={() => console.log("not fond")} />
+      </Switch>
     );
   };
   componentDidMount() {
